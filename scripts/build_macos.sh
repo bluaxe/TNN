@@ -2,12 +2,7 @@
 
 set -exuo pipefail
 
-if [ -z $TNN_DIR ]
-then
-    TNN_DIR=$(cd `dirname $0`; pwd)/..
-    echo $TNN_DIR
-fi
-
+TNN_DIR=$(cd `dirname $0`; pwd)/..
 BUILD_DIR=${TNN_DIR}/scripts/build_macos
 TNN_INSTALL_DIR=${TNN_DIR}/scripts/macos_release
 OPENVINO_BUILD_SHARED="OFF"
